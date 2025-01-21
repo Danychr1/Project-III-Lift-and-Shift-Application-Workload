@@ -3,6 +3,7 @@
 This project demonstrates how to host and run a multi-tier web application stack on AWS Cloud using a Lift-and-Shift Strategy. It explores the process of migrating application workloads from on-premises environments to AWS Cloud while maintaining operational continuity.
 
 # Scenario
+
   * Current Setup: Application services are hosted on physical or virtual machines in a data center.
   * Teams Involved:
     
@@ -15,6 +16,7 @@ This project demonstrates how to host and run a multi-tier web application stack
        4 System Administrators.
     
 # Challenges:
+
  - Complex infrastructure management.
  - Difficulty scaling resources up or down.
  - High upfront capital expenditures (CapEx) and ongoing operational costs (OpEx).
@@ -22,6 +24,7 @@ This project demonstrates how to host and run a multi-tier web application stack
  - Time-consuming maintenance and operations.
 
 # Solution: 
+
 By migrating to AWS, the benefits achieved will be:
 * Cloud Computing  setup 
 * Pay-as-you-go model: Reduced costs with no upfront investment.
@@ -35,54 +38,52 @@ By migrating to AWS, the benefits achieved will be:
      * Auto Scaling for cost-effective resource scaling.
   
 * Networking:
-- Elastic Load Balancer (ELB) – Replacing NGINX for load balancing.
-- Route 53 – Private DNS service.
+     * Elastic Load Balancer (ELB) – Replacing NGINX for load balancing.
+     * Route 53 – Private DNS service.
   
 * Storage:
-- Amazon S3 / Elastic File System (EFS) for shared storage.
-- Elastic Block Store (EBS) for persistent VM storage.
+     * Amazon S3 / Elastic File System (EFS) for shared storage.
+     * Elastic Block Store (EBS) for persistent VM storage.
   
 * Security and Management:
-- AWS Identity and Access Management (IAM).
-- Amazon Certificate Manager (ACM) for SSL/TLS.
+     * AWS Identity and Access Management (IAM).
+     * Amazon Certificate Manager (ACM) for SSL/TLS.
 
 # Project Objectives
+
 * Build a flexible, scalable infrastructure.
 * Minimize costs with a pay-as-you-go model.
 * Modernize application deployment using AWS services.
 * Implement Infrastructure as Code (IaC) for efficient management and automation.
 
 # AWS Architecture Overview
-EC2 Instances (application and backend services).
-Elastic Load Balancer (ELB) for traffic distribution.
-Auto Scaling Group for dynamic instance scaling.
-S3/EFS for shared storage.
-Route 53 for DNS management.
-ACM for SSL/TLS certificates.
-Execution Flow
-Setup AWS Environment:
 
-Login to AWS account.
-Create key pairs and security groups.
-Provision Resources:
+* EC2 Instances (application and backend services).
+* Elastic Load Balancer (ELB) for traffic distribution.
+* Auto Scaling Group for dynamic instance scaling.
+* S3/EFS for shared storage.
+* Route 53 for DNS management.
+* ACM for SSL/TLS certificates.
 
-Deploy Tomcat (Apache) servers.
-Configure Elastic Load Balancer (ELB).
-Set up backend services.
-Launch EC2 instances with user data (Bash scripts).
-Networking and DNS Configuration:
 
-Update IP-to-name mapping in Route 53.
-Map the ELB endpoint to the website name in GoDaddy DNS (or preferred DNS provider).
-Application Deployment:
+# Execution Flow
+ a. Setup AWS Environment:
+- Login to AWS account.
+- Create key pairs 
+- Create security groups
+    1. Deploy Tomcat (Apache) servers.
+       
+    2. Configure Elastic Load Balancer (ELB).
+       
+    3. Set up backend services.
+       
+- Launch EC2 instances with user data (Bash scripts).
+- Networking and DNS Configuration:
+- Update IP-to-name mapping in Route 53.
+- Map the ELB endpoint to the website name in GoDaddy DNS (or preferred DNS provider).
+- Verify
+- Build an auto-scaling group for Tomcat Instances
 
-Build the application from source code.
-Upload artifacts to an S3 bucket.
-Download artifacts to Tomcat EC2 instances.
-Testing and Verification:
 
-Verify deployment functionality and connectivity.
-Scaling and Automation:
+Author 🧑‍💻: Dany Christel
 
-Configure auto-scaling for Tomcat instances to optimize costs and performance.
-This project demonstrates the practical application of AWS services to modernize and streamline web application hosting and management, showcasing scalability, cost optimization, and automation through cloud infrastructure.
