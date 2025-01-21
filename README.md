@@ -4,7 +4,8 @@ This project demonstrates how to host and run a multi-tier web application stack
 
 # Scenario
   * Current Setup: Application services are hosted on physical or virtual machines in a data center.
-  * Teams Involved: 
+  * Teams Involved:
+    
        1 Virtualization Team,
     
        2 Data Center Operations,
@@ -30,8 +31,8 @@ By migrating to AWS, the benefits achieved will be:
 
 # AWS Services Used
 * Compute:
-- EC2 Instances for application servers (e.g., Tomcat, RabbitMQ, Memcached, MySQL).
-- Auto Scaling for cost-effective resource scaling.
+     * EC2 Instances for application servers (e.g., Tomcat, RabbitMQ, Memcached, MySQL).
+     * Auto Scaling for cost-effective resource scaling.
   
 * Networking:
 - Elastic Load Balancer (ELB) – Replacing NGINX for load balancing.
